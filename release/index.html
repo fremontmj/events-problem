@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Bucklescript TEA Starter Kit</title>
+  </head>
+  <script src="http://localhost:35729/livereload.js?snipver=1"></script>
+
+
+
+  <body>
+      <!-- I don't know why I had to make this capitalized -->
+      <script src="Main.js"></script>
+      <script>
+      // NOTE: this code is not working HERE
+      // replace with a subscription
+      function jsAnimationUpdate(){
+        console.log("hello from jsAnimationUpdate")
+        var event = new CustomEvent(
+          "animationUpdate",
+          {
+            bubbles: true,
+            cancelable: true
+          }
+          );
+
+        document.documentElement.dispatchEvent(event);
+        }
+        setTimeout(function(){
+        var app = starter.main(document.body);
+        }, 1)
+    </script>
+  </body>
+</html>
